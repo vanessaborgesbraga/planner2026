@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Viver o Hoje & Construir o Amanhã</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Gate -->
+  <div id="gate" class="panel center">
+    <div class="brand">
+      <div class="butterfly">🦋</div>
+      <h1>Viver o Hoje & Construir o Amanhã</h1>
+    </div>
+    <p class="lead">Acesso restrito — insira a senha para abrir o planner.</p>
+    <input id="pass" class="input" placeholder="Senha" />
+    <div class="actions">
+      <button id="enterBtn" class="btn">Acessar meu planner</button>
+    </div>
+    <p class="note small">Compartilhe a senha apenas com seus clientes autorizados.</p>
+  </div>
+
+  <!-- App -->
+  <div id="app" style="display:none;">
+    <header class="header">
+      <div class="title">Viver o Hoje & Construir o Amanhã</div>
+      <nav class="menu">
+        <a href="#jan">Janeiro</a>
+        <a href="#fev">Fevereiro</a>
+        <a href="#mar">Março</a>
+        <a href="#abr">Abril</a>
+        <a href="#mai">Maio</a>
+        <a href="#jun">Junho</a>
+        <a href="#jul">Julho</a>
+        <a href="#ago">Agosto</a>
+        <a href="#set">Setembro</a>
+        <a href="#out">Outubro</a>
+        <a href="#nov">Novembro</a>
+        <a href="#dez">Dezembro</a>
+      </nav>
+      <button id="logout" class="btn small">Sair</button>
+    </header>
+
+    <main class="container">
+      <!-- Intro / O que é um planner -->
+      <section id="intro" class="card">
+        <h2>Embeleze sua rotina</h2>
+        <p><em>Embeleze sua rotina com o Planner Viver o Hoje & Construir o Amanhã — um espaço para transformar o cotidiano em um exercício de presença, poesia, filosofia e propósito.</em></p>
+        <h3>O que é um Planner?</h3>
+        <p>O planner é mais do que uma agenda. É uma ferramenta de autoconhecimento que te convida a refletir sobre o hoje e a planejar o amanhã com consciência. Ele te ajuda a visualizar objetivos, organizar prioridades e registrar conquistas, tornando-se um espelho do seu processo de crescimento pessoal.</p>
+        <p class="footnote">“Se você não sabe para onde quer ir, qualquer caminho serve.” — Lewis Carroll, <em>Alice no País das Maravilhas</em></p>
+      </section>
+
+      <!-- Mensagem ao Eu Futuro -->
+      <section id="future" class="card">
+        <h3>Mensagem para o seu Eu Futuro</h3>
+        <p>Escreva aqui uma mensagem para o seu eu futuro ler daqui a 180 dias.</p>
+        <textarea id="future_msg" data-save="future_msg" placeholder="Escreva..."></textarea>
+      </section>
+
+      <!-- Roda da Vida -->
+      <section id="roda" class="card">
+        <h3>Roda da Vida</h3>
+        <p>Marque (0-10) e responda às perguntas reflexivas.</p>
+        <div class="grid-4">
+          <label>Bem-estar emocional <input id="r_bem" data-save="r_bem" type="number" min="0" max="10" /></label>
+          <label>Saúde <input id="r_saude" data-save="r_saude" type="number" min="0" max="10" /></label>
+          <label>Carreira <input id="r_car" data-save="r_car" type="number" min="0" max="10" /></label>
+          <label>Finanças <input id="r_fin" data-save="r_fin" type="number" min="0" max="10" /></label>
+          <label>Relacionamentos <input id="r_rel" data-save="r_rel" type="number" min="0" max="10" /></label>
+          <label>Lazer <input id="r_lazer" data-save="r_lazer" type="number" min="0" max="10" /></label>
+          <label>Crescimento pessoal <input id="r_cres" data-save="r_cres" type="number" min="0" max="10" /></label>
+          <label>Espiritualidade <input id="r_esp" data-save="r_esp" type="number" min="0" max="10" /></label>
+        </div>
+        <h4>Perguntas</h4>
+        <label>1) Quais áreas você dedica mais atenção?<textarea id="r_q1" data-save="r_q1"></textarea></label>
+        <label>2) Quais áreas você gostaria de melhorar?<textarea id="r_q2" data-save="r_q2"></textarea></label>
+        <label>3) Estabeleça 3 áreas para potencializar em 2026:<textarea id="r_q3" data-save="r_q3" placeholder="1)  2)  3)"></textarea></label>
+      </section>
+
+      <!-- Example month: Janeiro -->
+      <section id="jan" class="card month">
+        <h2>Janeiro</h2>
+        <h3>Música de abertura: "O Que É, O Que É?" — Gonzaguinha (1982)</h3>
+        <p class="verse">Eu fico com a pureza da resposta das crianças: É a vida, é bonita e é bonita!... (trecho)</p>
+        <p><a class="link" target="_blank" href="https://www.youtube.com/results?search_query=o+que+%C3%A9+o+que+%C3%A9+gonzaguinha">Ouvir no YouTube</a></p>
+
+        <h4>Metas do Mês</h4>
+        <label>Atividade física <input data-save="jan_fis" /></label>
+        <label>Leitura <input data-save="jan_lei" /></label>
+        <label>Hobbies <input data-save="jan_hob" /></label>
+
+        <h4>Agenda do Dia (exemplo)</h4>
+        <textarea id="jan_note" data-save="jan_note" placeholder="Horários, compromissos..."></textarea>
+
+        <h4>Fim de semana — Dica de Saúde e Treino Mental</h4>
+        <ul>
+          <li>Converse com um amigo com quem não falava há meses.</li>
+          <li>Quebra-cabeça: Quantos anjos cabem na cabeça de uma agulha?</li>
+        </ul>
+      </section>
+
+      <!-- Example month: Julho with the poem exactly as you provided -->
+      <section id="jul" class="card month">
+        <h2>Julho</h2>
+        <h3>Poema de abertura: "Quando ela dança" — Vanessa Borges Braga (2025)</h3>
+        <pre class="poem">Quando ela dança, se sente flutuar.
+ se desprende do mundo
+e se encontra.
+Quando ela dança, prende seu olhar.
+Não por vaidade,
+mas porque há uma força silenciosa
+nos seus gestos…
+Uma harmonia que encanta.
+Quando ela dança, o tempo se confunde.
+Passado e presente se entrelaçam,
+e o coração transborda
+enxurradas de sentimentos
+guardados sob a pele.
+Quando ela dança, o mundo silencia,
+o tempo recua,
+a dor adormece.
+Há um grito mudo em cada gesto,
+uma memória viva que não se esquece.
+Quando ela dança, não há dor física.
+Nem da alma.
+O corpo não reclama,
+a mente se esvazia.
+Quando ela dança,
+dança somente para celebrar
+que está viva —
+que pulsa em cada poro.
+E só porque ela dança,
+seu mundo se transforma
+num refrão de bolero,
+no gingado do samba de gafieira,
+ na alegria contagiante do forró 
+e na pura sensualidade da salsa.</pre>
+        <p class="small">Fonte: Vanessa Borges Braga, Impacto da dança de salão no tratamento de pessoas com transtorno mental, 2025</p>
+
+        <h4>Metas do Mês</h4>
+        <label>Atividade física <input data-save="jul_fis" /></label>
+        <label>Leitura <input data-save="jul_lei" /></label>
+        <label>Hobbies <input data-save="jul_hob" /></label>
+        <h4>Agenda do Dia</h4>
+        <textarea data-save="jul_note"></textarea>
+      </section>
+
+      <!-- Footer / Credits -->
+      <footer class="card foot">
+        <p>Criação e organização: Vanessa Borges Braga — Psicoterapia Online | Jovens, Adultos e 60+ — CRP 09/003552</p>
+        <p>Design editorial e Assessoria em Marketing da Saúde: Fernanda Borges Braga</p>
+        <p>Contato: <a href="mailto:vanessaborgesbraga@gmail.com">vanessaborgesbraga@gmail.com</a> — WhatsApp: +55 (62) 98204-2832</p>
+        <p class="small">“Tudo o que a gente sofre num abraço se dissolve.” — Jota Quest</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
