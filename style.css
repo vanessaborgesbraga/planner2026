@@ -1,0 +1,29 @@
+:root{
+  --blue:#2f6690;
+  --light:#5fb6c4;
+  --silver:#bfc6c9;
+  --paper:#ffffff;
+  --muted:#6b7280;
+}
+body{font-family: "Lucida Sans", Arial, sans-serif; margin:0; background:var(--paper); color:#123;}
+.header{display:flex; justify-content:space-between; align-items:center; padding:12px 20px; border-bottom:1px solid #eef3f6;}
+.title{font-weight:700; color:var(--blue);}
+.menu a{margin:0 6px; color:var(--blue); text-decoration:none; font-weight:600;}
+.container{max-width:980px; margin:18px auto; padding:0 12px;}
+.panel.center{max-width:640px; margin:60px auto; padding:28px; border:1px solid #e7eef6; border-radius:8px; text-align:center; background:linear-gradient(180deg, rgba(95,182,196,0.06), rgba(255,255,255,0.9));}
+.brand .butterfly{font-size:48px;}
+.lead{color:var(--muted);}
+.input{width:100%; padding:8px; margin:8px 0; border:1px solid #dfeef6; border-radius:6px; box-sizing:border-box;}
+.btn{background:var(--blue); color:white; padding:8px 12px; border-radius:6px; border:none; cursor:pointer;}
+.small{font-size:13px; color:var(--muted);}
+.card{background:white; border:1px solid #eef6fb; padding:16px; border-radius:8px; margin-bottom:12px; box-shadow: 0 1px 0 rgba(0,0,0,0.02);}
+.grid-4{display:grid; grid-template-columns:repeat(2,1fr); gap:8px;}
+.month .poem{font-style:italic; color:#234;}
+.pre{white-space:pre-wrap;}
+.foot{font-size:13px; color:var(--muted); text-align:center;}
+label{display:block; margin:8px 0; font-weight:600; color:#234;}
+textarea{width:100%; min-height:90px; padding:8px; border-radius:6px; border:1px solid #e6f0f6;}
+a.link{color:var(--blue);}
+.header .title{font-size:18px;}
+.header .menu{display:flex; gap:8px; align-items:center;}
+@media (max-width:700px){ .grid-4{grid-template-columns:1fr;} .menu{display:none;} }
